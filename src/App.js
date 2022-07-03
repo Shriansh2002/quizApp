@@ -3,7 +3,7 @@ import QuizPage from './pages/QuizPage';
 import LoginPage from './pages/LoginPage';
 
 const App = () => {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
 	return (
 		<>
 			{isLoggedIn ? (
