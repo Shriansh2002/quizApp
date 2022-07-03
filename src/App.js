@@ -1,23 +1,19 @@
-import './App.css';
+import { useState } from 'react';
+import QuizPage from './pages/QuizPage';
+import LoginPage from './pages/LoginPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	return (
+		<>
+			{isLoggedIn ? (
+				<QuizPage />
+			) : (
+				<LoginPage setIsLoggedIn={setIsLoggedIn} />
+			)}
+
+		</>
+	);
+};
 
 export default App;
